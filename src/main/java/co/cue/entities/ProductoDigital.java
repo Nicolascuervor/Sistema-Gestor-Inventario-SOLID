@@ -1,12 +1,12 @@
 package co.cue.entities;
-
-
 import co.cue.interfaces.Descargable;
 
+// Capa intermedia: Centraliza el estado común de los productos intangibles
 public abstract class ProductoDigital extends Producto implements Descargable {
+
     protected double tamanoMB;
 
-    public ProductoDigital(String nombre, double precio, double tamanoMB) {
+    protected ProductoDigital(String nombre, double precio, double tamanoMB) {
         super(nombre, precio);
         this.tamanoMB = tamanoMB;
     }
@@ -15,4 +15,5 @@ public abstract class ProductoDigital extends Producto implements Descargable {
     public double getTamanoMB() {
         return tamanoMB;
     }
+
 }
